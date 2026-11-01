@@ -1,0 +1,74 @@
+[
+{
+  "directory": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/build",
+  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"Debug\\\"  -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20 -o CMakeFiles/lotka_volterra.dir/Debug/source/main.cpp.o -c /home/simonevaligi/c++/programmazione/Lotka-Volterra/source/main.cpp",
+  "file": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/source/main.cpp",
+  "output": "CMakeFiles/lotka_volterra.dir/Debug/source/main.cpp.o"
+},
+{
+  "directory": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/build",
+  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"Debug\\\"  -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20 -o CMakeFiles/lotka_volterra.dir/Debug/source/simulation.cpp.o -c /home/simonevaligi/c++/programmazione/Lotka-Volterra/source/simulation.cpp",
+  "file": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/source/simulation.cpp",
+  "output": "CMakeFiles/lotka_volterra.dir/Debug/source/simulation.cpp.o"
+},
+{
+  "directory": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/build",
+  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"Release\\\"  -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20 -o CMakeFiles/lotka_volterra.dir/Release/source/main.cpp.o -c /home/simonevaligi/c++/programmazione/Lotka-Volterra/source/main.cpp",
+  "file": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/source/main.cpp",
+  "output": "CMakeFiles/lotka_volterra.dir/Release/source/main.cpp.o"
+},
+{
+  "directory": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/build",
+  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"Release\\\"  -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20 -o CMakeFiles/lotka_volterra.dir/Release/source/simulation.cpp.o -c /home/simonevaligi/c++/programmazione/Lotka-Volterra/source/simulation.cpp",
+  "file": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/source/simulation.cpp",
+  "output": "CMakeFiles/lotka_volterra.dir/Release/source/simulation.cpp.o"
+},
+{
+  "directory": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/build",
+  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\"  -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20 -o CMakeFiles/lotka_volterra.dir/RelWithDebInfo/source/main.cpp.o -c /home/simonevaligi/c++/programmazione/Lotka-Volterra/source/main.cpp",
+  "file": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/source/main.cpp",
+  "output": "CMakeFiles/lotka_volterra.dir/RelWithDebInfo/source/main.cpp.o"
+},
+{
+  "directory": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/build",
+  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\"  -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20 -o CMakeFiles/lotka_volterra.dir/RelWithDebInfo/source/simulation.cpp.o -c /home/simonevaligi/c++/programmazione/Lotka-Volterra/source/simulation.cpp",
+  "file": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/source/simulation.cpp",
+  "output": "CMakeFiles/lotka_volterra.dir/RelWithDebInfo/source/simulation.cpp.o"
+},
+{
+  "directory": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/build",
+  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"Debug\\\"  -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20 -o CMakeFiles/lotka_volterra.t.dir/Debug/test/test_simulation.cpp.o -c /home/simonevaligi/c++/programmazione/Lotka-Volterra/test/test_simulation.cpp",
+  "file": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/test/test_simulation.cpp",
+  "output": "CMakeFiles/lotka_volterra.t.dir/Debug/test/test_simulation.cpp.o"
+},
+{
+  "directory": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/build",
+  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"Debug\\\"  -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20 -o CMakeFiles/lotka_volterra.t.dir/Debug/source/simulation.cpp.o -c /home/simonevaligi/c++/programmazione/Lotka-Volterra/source/simulation.cpp",
+  "file": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/source/simulation.cpp",
+  "output": "CMakeFiles/lotka_volterra.t.dir/Debug/source/simulation.cpp.o"
+},
+{
+  "directory": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/build",
+  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"Release\\\"  -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20 -o CMakeFiles/lotka_volterra.t.dir/Release/test/test_simulation.cpp.o -c /home/simonevaligi/c++/programmazione/Lotka-Volterra/test/test_simulation.cpp",
+  "file": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/test/test_simulation.cpp",
+  "output": "CMakeFiles/lotka_volterra.t.dir/Release/test/test_simulation.cpp.o"
+},
+{
+  "directory": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/build",
+  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"Release\\\"  -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20 -o CMakeFiles/lotka_volterra.t.dir/Release/source/simulation.cpp.o -c /home/simonevaligi/c++/programmazione/Lotka-Volterra/source/simulation.cpp",
+  "file": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/source/simulation.cpp",
+  "output": "CMakeFiles/lotka_volterra.t.dir/Release/source/simulation.cpp.o"
+},
+{
+  "directory": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/build",
+  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\"  -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20 -o CMakeFiles/lotka_volterra.t.dir/RelWithDebInfo/test/test_simulation.cpp.o -c /home/simonevaligi/c++/programmazione/Lotka-Volterra/test/test_simulation.cpp",
+  "file": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/test/test_simulation.cpp",
+  "output": "CMakeFiles/lotka_volterra.t.dir/RelWithDebInfo/test/test_simulation.cpp.o"
+},
+{
+  "directory": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/build",
+  "command": "/usr/bin/c++ -DCMAKE_INTDIR=\\\"RelWithDebInfo\\\"  -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20 -o CMakeFiles/lotka_volterra.t.dir/RelWithDebInfo/source/simulation.cpp.o -c /home/simonevaligi/c++/programmazione/Lotka-Volterra/source/simulation.cpp",
+  "file": "/home/simonevaligi/c++/programmazione/Lotka-Volterra/source/simulation.cpp",
+  "output": "CMakeFiles/lotka_volterra.t.dir/RelWithDebInfo/source/simulation.cpp.o"
+}
+]

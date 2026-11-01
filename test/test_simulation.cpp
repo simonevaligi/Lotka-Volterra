@@ -1,4 +1,4 @@
-#define DOCTEST_COMFIG_IMPLEMENT_WITH_MAIN
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 
 #include <cmath>
 #include <stdexcept>

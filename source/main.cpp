@@ -97,6 +97,10 @@ int main(int argc, char* argv[]) {
       return 1;
     };
 
+    std::cout << "Equilibrium point:" << std::endl;
+    std::cout << "x_eq = " << simulation.get_x_eq()
+              << ", y_eq = " << simulation.get_y_eq() << std::endl;
+
   } catch (const std::exception& e) {
     std::cerr << e.what() << std::endl;
   }
