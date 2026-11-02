@@ -1,2 +1,2 @@
-lotka_volterra.t 2 0.0238142
+lotka_volterra.t 4 0.00165921
 ---

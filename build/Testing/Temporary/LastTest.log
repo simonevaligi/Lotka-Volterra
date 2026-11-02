@@ -1,10 +1,10 @@
-Start testing: Nov 02 00:19 CET
+Start testing: Nov 02 15:12 CET
 ----------------------------------------------------------
 1/1 Testing: lotka_volterra.t
 1/1 Test: lotka_volterra.t
-Command: "/home/simonevaligi/c++/programmazione/Lotka-Volterra/build/Debug/lotka_volterra.t"
+Command: "/home/simonevaligi/c++/programmazione/Lotka-Volterra/build/Release/lotka_volterra.t"
 Directory: /home/simonevaligi/c++/programmazione/Lotka-Volterra/build
-"lotka_volterra.t" start time: Nov 02 00:19 CET
+"lotka_volterra.t" start time: Nov 02 15:12 CET
 Output:
 ----------------------------------------------------------
 [doctest] doctest version is "2.5.0"
@@ -14,11 +14,11 @@ Output:
 [doctest] assertions: 4030 | 4030 passed | 0 failed |
 [doctest] Status: SUCCESS!
 <end of output>
-Test time =   0.05 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"lotka_volterra.t" end time: Nov 02 00:19 CET
+"lotka_volterra.t" end time: Nov 02 15:12 CET
 "lotka_volterra.t" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 02 00:19 CET
+End testing: Nov 02 15:12 CET
