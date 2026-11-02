@@ -1,1 +1,12 @@
 \section{Logica dei test}
+
+L'implementazione dei test unitari è stata realizzata tramite la libreria \verb|doctest| e coprono molteplici aspetti del programma, per garantire un buon funzionamento dei casi critici o al limite.
+In particolare:
+\begin{itemize}
+    \item controllo dei parametri iniziali della simulazione a prevenzione di valori non validi: valori corretti, valori nulli e valori negativi
+    \item controllo del calcolo del punto di equilibrio, del calcolo dei valori relativi e assoluti
+    \item controllo dell'evoluzione temporale delle popolazioni: incremento temporale, stabilità al punto di equilibrio, ottenimento dei valori assoluti e valutazione del segno e della magnitudo della simulazione
+    \item controllo del calcolo dell'integrale del moto $H(x,y)$ e della sua conservazione
+    \item controllo della stampa su schermo
+    \item verifica della divergenza ad un passo temporale molto grande rispetto all'ordine di grandezza consigliato ($\sim$ 1 ms)
+\end{itemize}

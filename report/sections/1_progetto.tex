@@ -1,4 +1,47 @@
 \section{Progetto}
+
+Lo scopo del progetto è la costruzione di un programma \verb|C++| che simuli l'interazione tra due specie animali secondo il \href{https://it.wikipedia.org/wiki/Equazioni_di_Lotka-Volterra}{Modello Lotka-Volterra}.
+Le due specie sono identificate tramite due variabili: $x$ e $y$, rispettivamente per le prede e i predatori. Gli ultimi si cibano dei primi.
 \subsection{Descrizione del sistema}
+Identificate le popolazioni di prede e predatori ad un certo istante temporale come $x(t)$ e $y(t)$, ne modelliamo l'andamento temporale tramite il set di equazioni differenziali, dette Equazioni di Lotka-Volterra:
+\[
+    \frac{\mathrm{d}x}{\mathrm{dt}} = \left[ A - B y(t)\right] x(t) \qquad \qquad    \frac{\mathrm{d}y}{\mathrm{dt}} = \left[ C x(t) - D \right] y(t)
+\]
+dove i coefficienti rappresentano
+\begin{itemize}
+    \item A - tasso di riproduzione delle prede
+    \item B - tasso di mortalità delle prede
+    \item C - tasso di riproduzione dei predatori
+    \item D - tasso di mortalità dei predatori
+\end{itemize}
+La riproduzione è data dal consumo delle risorse disponibili alle due specie.
+La mortalità delle prede è data dall'interazione con i predatori, che ne causano la morte; analogamente la riproduzione dei predatori è data dalla disponibilità di prede nel sistema e la mortalità dalla scarsità di prede.
+Tutti questi parametri devono essere considerati maggiori di zero.
+
+Durante la simulazione viene usata la versione discretizzata delle equazioni, tramite il \href{https://it.wikipedia.org/wiki/Metodo_di_Eulero_semi-implicito}{\textit{metodo di Eulero simplettico}}:
+
+\[
+    x_i = x_{i-1} + \left(A - B y_i\right) x_{i-1} \Delta t
+    \qquad \qquad
+    y_i = y_{i-1} + \left(C x_{i-1} - D\right) y_{i-1} \Delta t
+\]
+La scelta di moltiplicare $B$ per $y_i$ nel calcolo di $x_i$ si discosta dal metodo di integrazione che invece prevede $y_{i-1}$.
+Questa scelta garantisce una stabilità maggiore del calcolo dell'integrale primo del moto $H(x,y)$, ma impone l'accorgimento di dover calcolare ad ogni passo dell'integrazione numerica prima $y_i$ e poi $x_i$.
+
 \subsection{Dinamica del sistema}
+Consideriamo uno stato iniziale determinato da $(x_0, y_0)$, tali che siano entrambi maggiori di 0, allora le orbite del sistame sono ristrette a valori positivi di $x(t)$ e $y(t)$. Questa richiesta è giustificata dal senso fisico del sistema: un numero di individui negativo non ha senso di esistere.
+
+\par Risolvendo il sistema di equazioni differenziali si ottengo due punti di equilibrio:
+\[
+    e_1 = (0,0) \quad \mathrm{e} \quad e_2 = \left(\frac{D}{C}, \frac{A}{B} \right)
+\]
+che sono, rispettivamente, il caso con assenza contemporanea di prede e predatori e il secondo è l'unico caso non banale in cui l'evoluzione del sistema garantisce la stazionarietà delle popolazioni: si tratta di un perfetto equilibrio tra tutti i parametri del sistema.
+
+Inoltre, si può ottenere una funzione che assume il ruolo di "energia" del sistema, per cui scelte delle condizioni si conserva lungo questa traiettoria. Per questa similitudine, verrà indicata con $H$:
+\[
+    H(x,y) = C x + B y - \left[D \ln(x) + A \ln(y)\right]
+\]
+In particolare il punto di equilibrio $\left(\frac{D}{C}, \frac{A}{B} \right)$ rappresenta anche il punto di minimo di $H(x,y)$
+
 \subsection{Obiettivi del codice}
+Forniti in input i valori iniziali $(x_0,y_0)$ e i quattro parametri delle equazioni di Lotka-Volterra, il programma sviluppa una simulazione che ad ogni step temporale calcola la terna $(x_i, y_i, H_i)$ e la salvi su un file \verb|.txt|.

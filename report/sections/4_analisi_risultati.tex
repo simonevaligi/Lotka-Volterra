@@ -1,1 +1,19 @@
 \section{Analisi dei risultati}
+
+Si suggerisce una simulazione con i seguenti parametri all'invocazione:
+\begin{verbatim}
+initial_x = 1.8;
+initial_y = 4.3;
+A = 0.1;
+B = 0.02;
+C = 0.05;
+D = 0.1;
+dt = 0.001;
+steps = 130000;
+\end{verbatim}
+
+L'approssimazione armonica delle equazioni di Lotka-Volterra implica un periodo di oscillazione
+\[
+    T \simeq \frac{2 \pi}{\sqrt{A D}}
+\]
+per cui, per ottenere all'incirca due periodi (necessari a verificare soddisfacentemente la periodicità) si consiglia di valutare attentamente il numero di passi temporali inseriti tramite la formula riportata.

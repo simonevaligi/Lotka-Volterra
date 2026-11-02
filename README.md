@@ -10,6 +10,13 @@ $ sudo apt install ninja-build
 * verifica della versione
 ```bash
 $ ninja --version
+1.11.1
+```
+
+Verifica della versione di CMake (richiesta la versione 3.28 o successive):
+```bash
+$ cmake --version
+cmake version 3.28.3
 ```
 
 ### Build

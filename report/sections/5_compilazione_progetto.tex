@@ -1,4 +1,81 @@
 \section{Compilazione del progetto}
 \subsection{Struttura}
+Il progetto è strutturato con una directory principale in cui sono presenti
+\begin{itemize}
+    \item le subdirectories
+          \begin{itemize}
+              \item \verb|source|: contiene i file sorgente del programma principale
+              \item \verb|test|: contiene la libreria \verb|doctest|, nella forma del file \verb|doctest.h|
+          \end{itemize}
+    \item i file
+          \begin{itemize}
+              \item \verb|CMakeLists.txt|: file di configurazione per CMake, utilizzato per la generazione dei Makefile
+              \item \verb|.clang-format|: standard file di formattazione del codice generato dal comando \\
+                    \verb|$ clang-format --sdump-config -style=google > .clang-format|
+          \end{itemize}
+\end{itemize}
+
 \subsection{Compilazione del codice sorgente}
+\subsubsection{Tramite CMake}
+\textbf{Building:}
+\\
+Dopo aver verificato la presenza del \textit{ninja build system} e la versione di CMake (necessaria la 3.28), ci si ponga nella directory principale e si eseguano:
+\begin{verbatim}
+    $ cmake -S . -B build -G"Ninja Multi-Config"
+\end{verbatim}
+Verranno creati dei file nella cartella \verb|build|.
+\\
+\textbf{Compilazione:}
+\\
+Per compilare in modalità \textit{Debug} e \textit{Release} eseguire rispettivamente:
+
+\begin{verbatim}
+    $ cmake --build build --config Debug
+\end{verbatim}
+e
+\begin{verbatim}
+    $ cmake --build build --config Release
+\end{verbatim}
+
+Dentro le cartelle \verb|./build/Debug| e \verb|./build/Release| saranno presenti gli eseguibili \verb|lotka_volterra| e \verb|lotka_volterra.t|, relativo ai test.
+
+\subsubsection{Tramite g++}
+Sempre nella cartella madre, la compilazione può essere eseguita tramite
+\begin{verbatim}
+    g++ -std=c++20 -Wall -Wextra source/main.cpp source/simulation.cpp -o lotka_volterra
+\end{verbatim}
+
+che genererà l'eseguibile \verb|lotka_volterra| nella cartella madre.
+
+Per compilare i test:
+
+\begin{verbatim}
+    g++ -std=c++20 test/test_simulation.cpp source/simulation.cpp -o test_simulation
+\end{verbatim}
+
+che, analogamente, produrrà l'eseguibile dei test \verb|test_simulation|.
+
 \subsection{Esecuzione del Programma Principale e dei Test Unitari}
+Chiamare i seguenti comandi per l'esecuzione dei test sia in modalità \textit{Debug} che \textit{Release}:
+
+\begin{verbatim}
+    $ cmake --build build --config Debug --target test
+\end{verbatim}
+
+e
+
+\begin{verbatim}
+    $ cmake --build build --config Release --target test
+\end{verbatim}
+
+Chiamare i seguenti comandi per l'esecuzione del programma principale (sia in modalità \textit{Debug} che \textit{Release}):
+
+\begin{verbatim}
+    $ ./build/Debug/lotka_volterra
+\end{verbatim}
+
+e
+
+\begin{verbatim}
+    $ ./build/Release/lotka_volterra
+\end{verbatim}

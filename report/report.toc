@@ -3,14 +3,16 @@
 \contentsline {section}{\numberline {1}Progetto}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Descrizione del sistema}{2}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Dinamica del sistema}{2}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Obiettivi del codice}{2}{subsection.1.3}%
-\contentsline {section}{\numberline {2}Implementazione}{2}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Struttura generale del codice}{2}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Dettagli di implementazione}{2}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Reposiory su github}{2}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Logica dei test}{2}{section.3}%
-\contentsline {section}{\numberline {4}Analisi dei risultati}{2}{section.4}%
-\contentsline {section}{\numberline {5}Compilazione del progetto}{2}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Struttura}{2}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Compilazione del codice sorgente}{2}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Esecuzione del Programma Principale e dei Test Unitari}{2}{subsection.5.3}%
+\contentsline {subsection}{\numberline {1.3}Obiettivi del codice}{3}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Implementazione}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Struttura generale del codice}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Dettagli di implementazione}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Repository su github}{5}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Logica dei test}{5}{section.3}%
+\contentsline {section}{\numberline {4}Analisi dei risultati}{6}{section.4}%
+\contentsline {section}{\numberline {5}Compilazione del progetto}{6}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Struttura}{6}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Compilazione del codice sorgente}{6}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Tramite CMake}{6}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Tramite g++}{7}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.3}Esecuzione del Programma Principale e dei Test Unitari}{7}{subsection.5.3}%

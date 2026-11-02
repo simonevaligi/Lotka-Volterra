@@ -1,4 +1,65 @@
 \section{Implementazione}
+
 \subsection{Struttura generale del codice}
+Il programma è organizzato in due cartelle \verb|source| e \verb|test|:
+\begin{itemize}
+    \item \verb|simulation.cpp| e il suo header file \verb|simulation.hpp|, in \verb|source|, descrivono la classe \verb|Simulation|, che rappresenta al suo interno una singola simulazione e ne mantinene internamente lo stato.
+          Inoltre, sono presenti i metodi per fare evolvere la simulazione di un \textit{time step} e visualizzarne i risultati.
+    \item \verb|test_simulation.cpp|, in \verb|test|, contiene i test per testare il funzionamento della classe.
+    \item \verb|main.cpp|, in \verb|source|, è l'\textit{entry point} del programma: crea l'oggetto \verb|Simulation|, evolve di un time step la simulazione, stampa schermo i risultati e li salva in un file.
+\end{itemize}
 \subsection{Dettagli di implementazione}
-\subsection{Reposiory su github}
+La classe \verb|Simulation|, definita nell'header file e implementata in \verb|simulation.cpp|, lo scheletro del programma: gestisce la simulazione dell'interazione e contiene i seguenti attributi e metodi principali:
+
+\vspace{1cm}
+\textbf{Attributi:}
+\begin{itemize}
+    \item \verb|double x_rel, y_rel|: numeri, relativi al punto di equilibrio, correnti di prede e predatori
+    \item \verb|double A, B, C, D|: parametri delle equazioni di Lotka-Volterra, come input
+    \item \verb|double x_eq, y_eq|: numeri di entità al punto di equilibrio
+    \item \verb|double T, dT|: tempo corrente e time step della simulazione
+\end{itemize}
+\textbf{Metodi:}
+\begin{itemize}
+    \item \verb|Simulation(simul_params const& params)|: costruttore che inizializza la simulazione attraverso i parametri di input; i parametri passati sono raggruppati nella \verb|struct| chiamata \verb|simul_params|
+    \item \verb|double get_relative_x(), get_relative_y()|: ottengono i valori relativi delle popolazioni correnti
+    \item \verb|double get_absolute_x(), get_absolute_y()|: calcolano i valori assoluti delle popolazioni correnti
+    \item \verb|double get_x_eq(), get_y_eq()|: ottengono i valori delle popolazioni all'equilibrio
+    \item \verb|double get_time()|: ottiene il tempo corrente
+    \item \verb|double get_H()|: calcola il valore dell'integrale del moto $H(x,y)$ corrente
+    \item \verb|void evolve()|: aggiorna i valori di \verb|x_rel| e \verb|y_rel|
+    \item \verb|std::string info()|: ritorna una stringa che rappresenta i valori $(x_i, y_i, H_i)$ di interesse della simulazione
+\end{itemize}
+
+In particolare, il metodo \verb|evolve()| è l'altro fulcro della simulazione poiché aggiorna lo stato delle popolazioni di prede e predatori ad ogni istante di tempo. Al suo interno, vengono usate le equazioni discretizzate di Lotka-Volterra.
+
+\begin{verbatim}
+    // time evolution method:
+void Simulation::evolve() {
+  T += dT;
+
+  y_rel += D * (x_rel - 1.0) * y_rel * dT;
+  x_rel += A * (1.0 - y_rel) * x_rel * dT;
+
+  // ensuring positive new relative values:
+  if (x_rel <= 0 || y_rel <= 0) {
+    throw std::runtime_error(
+        "Error: Invalid state occurred, x and y values must be positive");
+  }
+
+  // ensuring non-infinite new relative values:
+  if (std::isinf(x_rel) || std::isinf(y_rel)) {
+    throw std::runtime_error(
+        "Error: Invalid state occurred, overflow during simulation");
+  }
+}
+\end{verbatim}
+
+In \verb|main.cpp| viene gestito l'input dell'utente dalla riga di comando.
+Infatti, vengono gestiti i casi in cui l'utente inserisce i parametri all'invocazione della funzione e il caso in cui viene invocata soltanto la funzione e un'altra funzione \verb|void insert_params(simul_params& params)| gestisce l'interfaccia sul terminale; in entrambi i casi i parametri entrano nella \verb|struct| \verb|simul_params|.
+Inoltre, instanzia un oggetto \verb|Simulation| che rappresenta lo stato iniziale delle popolazioni di prede e predatori e i parametri delle equazioni.
+
+Non appena conclusa l'inizializzazione, la simulazione procede per un numero di time steps decisi dall'utente come un intero del passo temporale deciso, stampando a schermo i punti $(x_i, y_i, H_i)$ calcolati e salvandoli in un file \verb|simulation_output.txt|.
+
+\subsection{Repository su github}
+Il progetto è disponibile su GitHub, alla repo \href{https://github.com/simonevaligi/Lotka-Volterra}{Lotka-Volterra} del mio profilo \href{https://github.com/simonevaligi}{simonevaligi}.
