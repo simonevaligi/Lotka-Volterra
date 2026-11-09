@@ -3,10 +3,9 @@
 \subsection{Struttura generale del codice}
 Il programma è organizzato in due cartelle \verb|source| e \verb|test|:
 \begin{itemize}
-    \item \verb|simulation.cpp| e il suo header file \verb|simulation.hpp|, in \verb|source|, descrivono la classe \verb|Simulation|, che rappresenta al suo interno una singola simulazione e ne mantinene internamente lo stato.
-          Inoltre, sono presenti i metodi per fare evolvere la simulazione di un \textit{time step} e visualizzarne i risultati.
+    \item \verb|simulation.cpp| e il suo header file \verb|simulation.hpp|, in \verb|source|, descrivono la classe \verb|Simulation|, che rappresenta al suo interno una singola simulazione e ne mantinene internamente lo stato; inoltre, sono presenti i metodi per fare evolvere la simulazione di un \textit{time step} e visualizzarne i risultati.
     \item \verb|test_simulation.cpp|, in \verb|test|, contiene i test per testare il funzionamento della classe.
-    \item \verb|main.cpp|, in \verb|source|, è l'\textit{entry point} del programma: crea l'oggetto \verb|Simulation|, evolve di un time step la simulazione, stampa schermo i risultati e li salva in un file.
+    \item \verb|main.cpp|, in \verb|source|, è l'\textit{entry point} del programma: crea l'oggetto \verb|Simulation|, evolve di un time step la simulazione, stampa a schermo i risultati e li salva in un file.
 \end{itemize}
 \subsection{Dettagli di implementazione}
 La classe \verb|Simulation|, definita nell'header file e implementata in \verb|simulation.cpp|, lo scheletro del programma: gestisce la simulazione dell'interazione e contiene i seguenti attributi e metodi principali:
@@ -56,7 +55,7 @@ void Simulation::evolve() {
 \end{verbatim}
 
 In \verb|main.cpp| viene gestito l'input dell'utente dalla riga di comando.
-Infatti, vengono gestiti i casi in cui l'utente inserisce i parametri all'invocazione della funzione e il caso in cui viene invocata soltanto la funzione e un'altra funzione \verb|void insert_params(simul_params& params)| gestisce l'interfaccia sul terminale; in entrambi i casi i parametri entrano nella \verb|struct| \verb|simul_params|.
+Infatti, vengono gestiti il caso in cui l'utente inserisce i parametri all'invocazione della funzione e quello in cui viene invocata soltanto la funzione e un'altra funzione \verb|void insert_params(simul_params& params)| gestisce l'interfaccia sul terminale; in entrambi i casi i parametri entrano nella \verb|struct| \verb|simul_params|.
 Inoltre, instanzia un oggetto \verb|Simulation| che rappresenta lo stato iniziale delle popolazioni di prede e predatori e i parametri delle equazioni.
 
 Non appena conclusa l'inizializzazione, la simulazione procede per un numero di time steps decisi dall'utente come un intero del passo temporale deciso, stampando a schermo i punti $(x_i, y_i, H_i)$ calcolati e salvandoli in un file \verb|simulation_output.txt|.
